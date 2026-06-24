@@ -1,5 +1,6 @@
 CMakeFiles/leader_ft.dir/src/leader_ft.cpp.o: \
  /home/hela/amir/wam_teleop/src/leader_ft.cpp /usr/include/stdc-predef.h \
+ /usr/local/include/barrett/systems/print_to_stream.h \
  /usr/include/c++/13/iostream /usr/include/c++/13/bits/requires_hosted.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
@@ -151,10 +152,12 @@ CMakeFiles/leader_ft.dir/src/leader_ft.cpp.o: \
  /usr/include/c++/13/bits/locale_facets.tcc \
  /usr/include/c++/13/bits/basic_ios.tcc \
  /usr/include/c++/13/bits/ostream.tcc /usr/include/c++/13/istream \
- /usr/include/c++/13/bits/istream.tcc /usr/include/boost/thread.hpp \
- /usr/include/boost/thread/thread.hpp \
- /usr/include/boost/thread/thread_only.hpp \
- /usr/include/boost/thread/detail/platform.hpp \
+ /usr/include/c++/13/bits/istream.tcc \
+ /usr/local/include/barrett/detail/ca_macro.h \
+ /usr/local/include/barrett/systems/abstract/system.h \
+ /usr/include/c++/13/cassert /usr/include/assert.h \
+ /usr/include/boost/intrusive/list.hpp \
+ /usr/include/boost/intrusive/detail/config_begin.hpp \
  /usr/include/boost/config.hpp /usr/include/boost/config/user.hpp \
  /usr/include/boost/config/detail/select_compiler_config.hpp \
  /usr/include/boost/config/compiler/gcc.hpp /usr/include/c++/13/cstddef \
@@ -176,11 +179,76 @@ CMakeFiles/leader_ft.dir/src/leader_ft.cpp.o: \
  /usr/include/boost/config/detail/suffix.hpp \
  /usr/include/boost/config/helper_macros.hpp \
  /usr/include/boost/config/detail/cxx_composite.hpp \
+ /usr/include/boost/intrusive/intrusive_fwd.hpp \
+ /usr/include/boost/cstdint.hpp \
+ /usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h /usr/include/stdint.h \
+ /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
+ /usr/include/x86_64-linux-gnu/bits/stdint-least.h \
+ /usr/include/boost/intrusive/link_mode.hpp \
+ /usr/include/boost/intrusive/detail/workaround.hpp \
+ /usr/include/boost/intrusive/detail/assert.hpp \
+ /usr/include/boost/assert.hpp /usr/include/boost/intrusive/list_hook.hpp \
+ /usr/include/boost/intrusive/detail/list_node.hpp \
+ /usr/include/boost/intrusive/pointer_rebind.hpp \
+ /usr/include/boost/intrusive/circular_list_algorithms.hpp \
+ /usr/include/boost/intrusive/detail/algo_type.hpp \
+ /usr/include/boost/intrusive/detail/config_end.hpp \
+ /usr/include/boost/intrusive/options.hpp \
+ /usr/include/boost/intrusive/pack_options.hpp \
+ /usr/include/boost/intrusive/detail/generic_hook.hpp \
+ /usr/include/boost/intrusive/pointer_traits.hpp \
+ /usr/include/boost/move/detail/pointer_element.hpp \
+ /usr/include/boost/move/detail/workaround.hpp \
+ /usr/include/boost/intrusive/detail/mpl.hpp \
+ /usr/include/boost/move/detail/type_traits.hpp \
+ /usr/include/boost/move/detail/config_begin.hpp \
+ /usr/include/boost/move/detail/meta_utils.hpp \
+ /usr/include/boost/move/detail/meta_utils_core.hpp \
+ /usr/include/boost/move/detail/addressof.hpp \
+ /usr/include/boost/move/detail/config_end.hpp \
+ /usr/include/boost/intrusive/detail/node_holder.hpp \
+ /usr/include/boost/static_assert.hpp \
+ /usr/include/boost/detail/workaround.hpp \
+ /usr/include/boost/config/workaround.hpp \
+ /usr/include/boost/intrusive/detail/get_value_traits.hpp \
+ /usr/include/boost/intrusive/detail/hook_traits.hpp \
+ /usr/include/boost/intrusive/detail/parent_from_member.hpp \
+ /usr/include/boost/move/detail/to_raw_pointer.hpp \
+ /usr/include/boost/intrusive/detail/is_stateful_value_traits.hpp \
+ /usr/include/boost/intrusive/detail/function_detector.hpp \
+ /usr/include/boost/intrusive/detail/default_header_holder.hpp \
+ /usr/include/boost/intrusive/detail/reverse_iterator.hpp \
+ /usr/include/boost/move/detail/reverse_iterator.hpp \
+ /usr/include/boost/move/detail/iterator_traits.hpp \
+ /usr/include/boost/move/detail/std_ns_begin.hpp \
+ /usr/include/boost/move/detail/std_ns_end.hpp \
+ /usr/include/boost/intrusive/detail/uncast.hpp \
+ /usr/include/boost/intrusive/detail/list_iterator.hpp \
+ /usr/include/boost/intrusive/detail/std_fwd.hpp \
+ /usr/include/boost/intrusive/detail/iiterator.hpp \
+ /usr/include/boost/intrusive/detail/iterator.hpp \
+ /usr/include/boost/intrusive/detail/array_initializer.hpp \
+ /usr/include/boost/move/detail/placement_new.hpp \
+ /usr/include/boost/move/detail/force_ptr.hpp \
+ /usr/include/boost/intrusive/detail/exception_disposer.hpp \
+ /usr/include/boost/intrusive/detail/equal_to_value.hpp \
+ /usr/include/boost/intrusive/detail/key_nodeptr_comp.hpp \
+ /usr/include/boost/intrusive/detail/ebo_functor_holder.hpp \
+ /usr/include/boost/move/utility_core.hpp \
+ /usr/include/boost/move/core.hpp \
+ /usr/include/boost/intrusive/detail/tree_value_compare.hpp \
+ /usr/include/boost/intrusive/detail/simple_disposers.hpp \
+ /usr/include/boost/intrusive/detail/size_holder.hpp \
+ /usr/include/boost/intrusive/detail/algorithm.hpp \
+ /usr/include/boost/intrusive/detail/value_functors.hpp \
+ /usr/include/boost/intrusive/parent_from_member.hpp \
+ /usr/local/include/barrett/thread/abstract/mutex.h \
+ /usr/include/boost/thread.hpp /usr/include/boost/thread/thread.hpp \
+ /usr/include/boost/thread/thread_only.hpp \
+ /usr/include/boost/thread/detail/platform.hpp \
  /usr/include/boost/config/requires_threads.hpp \
  /usr/include/boost/thread/pthread/thread_data.hpp \
  /usr/include/boost/thread/detail/config.hpp \
- /usr/include/boost/detail/workaround.hpp \
- /usr/include/boost/config/workaround.hpp \
  /usr/include/boost/thread/detail/thread_safety.hpp \
  /usr/include/boost/thread/exceptions.hpp \
  /usr/include/boost/system/system_error.hpp \
@@ -194,10 +262,6 @@ CMakeFiles/leader_ft.dir/src/leader_ft.cpp.o: \
  /usr/include/boost/system/detail/config.hpp \
  /usr/include/boost/system/detail/requires_cxx11.hpp \
  /usr/include/boost/config/pragma_message.hpp \
- /usr/include/boost/cstdint.hpp \
- /usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h /usr/include/stdint.h \
- /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
- /usr/include/x86_64-linux-gnu/bits/stdint-least.h \
  /usr/include/c++/13/functional /usr/include/c++/13/tuple \
  /usr/include/c++/13/bits/uses_allocator.h \
  /usr/include/c++/13/bits/std_function.h /usr/include/c++/13/atomic \
@@ -229,8 +293,8 @@ CMakeFiles/leader_ft.dir/src/leader_ft.cpp.o: \
  /usr/include/c++/13/cstdint /usr/include/c++/13/limits \
  /usr/include/c++/13/ctime /usr/include/c++/13/bits/parse_numbers.h \
  /usr/include/c++/13/bits/std_mutex.h \
- /usr/include/c++/13/bits/unique_lock.h /usr/include/c++/13/cassert \
- /usr/include/assert.h /usr/include/boost/system/error_code.hpp \
+ /usr/include/c++/13/bits/unique_lock.h \
+ /usr/include/boost/system/error_code.hpp \
  /usr/include/boost/system/error_category.hpp \
  /usr/include/boost/system/error_condition.hpp \
  /usr/include/boost/system/generic_category.hpp \
@@ -259,7 +323,6 @@ CMakeFiles/leader_ft.dir/src/leader_ft.cpp.o: \
  /usr/include/boost/type_traits/detail/is_function_cxx_11.hpp \
  /usr/include/boost/type_traits/detail/yes_no_type.hpp \
  /usr/include/boost/type_traits/is_array.hpp \
- /usr/include/boost/static_assert.hpp \
  /usr/include/boost/type_traits/is_arithmetic.hpp \
  /usr/include/boost/type_traits/is_integral.hpp \
  /usr/include/boost/type_traits/is_floating_point.hpp \
@@ -272,22 +335,12 @@ CMakeFiles/leader_ft.dir/src/leader_ft.cpp.o: \
  /usr/include/boost/type_traits/remove_extent.hpp \
  /usr/include/boost/type_traits/add_pointer.hpp \
  /usr/include/boost/type_traits/conditional.hpp \
- /usr/include/boost/move/utility.hpp \
- /usr/include/boost/move/detail/config_begin.hpp \
- /usr/include/boost/move/detail/workaround.hpp \
- /usr/include/boost/move/utility_core.hpp \
- /usr/include/boost/move/core.hpp \
- /usr/include/boost/move/detail/config_end.hpp \
- /usr/include/boost/move/detail/meta_utils.hpp \
- /usr/include/boost/move/detail/meta_utils_core.hpp \
- /usr/include/boost/move/detail/addressof.hpp \
- /usr/include/boost/move/traits.hpp \
- /usr/include/boost/move/detail/type_traits.hpp \
+ /usr/include/boost/move/utility.hpp /usr/include/boost/move/traits.hpp \
  /usr/include/boost/thread/detail/lockable_wrapper.hpp \
  /usr/include/boost/thread/lock_options.hpp \
  /usr/include/boost/thread/lock_types.hpp \
  /usr/include/boost/thread/lockable_traits.hpp \
- /usr/include/boost/assert.hpp /usr/include/boost/thread/thread_time.hpp \
+ /usr/include/boost/thread/thread_time.hpp \
  /usr/include/boost/date_time/time_clock.hpp \
  /usr/include/boost/date_time/c_time.hpp \
  /usr/include/boost/throw_exception.hpp \
@@ -1153,6 +1206,14 @@ CMakeFiles/leader_ft.dir/src/leader_ft.cpp.o: \
  /usr/include/boost/type_traits/is_fundamental.hpp \
  /usr/include/boost/thread/detail/atomic_undef_macros.hpp \
  /usr/include/boost/thread/detail/atomic_redef_macros.hpp \
+ /usr/local/include/barrett/systems/abstract/detail/system-inl.h \
+ /usr/local/include/barrett/systems/abstract/execution_manager.h \
+ /usr/local/include/libconfig.h++ \
+ /usr/local/include/barrett/detail/libconfig_utils.h \
+ /usr/local/include/barrett/thread/null_mutex.h \
+ /usr/local/include/barrett/systems/helpers.h \
+ /usr/local/include/barrett/systems/abstract/single_io.h \
+ /usr/local/include/barrett/systems/abstract/conversion.h \
  /usr/local/include/barrett/detail/stl_utils.h \
  /usr/local/include/barrett/os.h /usr/local/include/barrett/detail/os.h \
  /usr/include/boost/format.hpp \
@@ -1178,9 +1239,6 @@ CMakeFiles/leader_ft.dir/src/leader_ft.cpp.o: \
  /usr/include/boost/format/free_funcs.hpp \
  /usr/include/boost/format/detail/unset_macros.hpp \
  /usr/local/include/barrett/products/product_manager.h \
- /usr/local/include/libconfig.h++ \
- /usr/local/include/barrett/detail/ca_macro.h \
- /usr/local/include/barrett/thread/abstract/mutex.h \
  /usr/local/include/barrett/bus/abstract/communications_bus.h \
  /usr/local/include/barrett/products/puck.h \
  /usr/local/include/barrett/products/detail/property_list.h \
@@ -1398,7 +1456,6 @@ CMakeFiles/leader_ft.dir/src/leader_ft.cpp.o: \
  /usr/include/gsl/gsl_matrix_uchar.h /usr/include/gsl/gsl_matrix_char.h \
  /usr/local/include/barrett/math/traits.h \
  /usr/local/include/barrett/math/detail/matrix-inl.h \
- /usr/local/include/barrett/detail/libconfig_utils.h \
  /usr/local/include/barrett/products/abstract/multi_puck_product.h \
  /usr/local/include/barrett/products/motor_puck.h \
  /usr/local/include/barrett/math/utils.h \
@@ -1420,62 +1477,6 @@ CMakeFiles/leader_ft.dir/src/leader_ft.cpp.o: \
  /usr/local/include/barrett/cdlbt/kinematics.h \
  /usr/local/include/libconfig.h \
  /usr/local/include/barrett/systems/low_level_wam_wrapper.h \
- /usr/local/include/barrett/systems/abstract/execution_manager.h \
- /usr/local/include/barrett/systems/abstract/system.h \
- /usr/include/boost/intrusive/list.hpp \
- /usr/include/boost/intrusive/detail/config_begin.hpp \
- /usr/include/boost/intrusive/intrusive_fwd.hpp \
- /usr/include/boost/intrusive/link_mode.hpp \
- /usr/include/boost/intrusive/detail/workaround.hpp \
- /usr/include/boost/intrusive/detail/assert.hpp \
- /usr/include/boost/intrusive/list_hook.hpp \
- /usr/include/boost/intrusive/detail/list_node.hpp \
- /usr/include/boost/intrusive/pointer_rebind.hpp \
- /usr/include/boost/intrusive/circular_list_algorithms.hpp \
- /usr/include/boost/intrusive/detail/algo_type.hpp \
- /usr/include/boost/intrusive/detail/config_end.hpp \
- /usr/include/boost/intrusive/options.hpp \
- /usr/include/boost/intrusive/pack_options.hpp \
- /usr/include/boost/intrusive/detail/generic_hook.hpp \
- /usr/include/boost/intrusive/pointer_traits.hpp \
- /usr/include/boost/move/detail/pointer_element.hpp \
- /usr/include/boost/intrusive/detail/mpl.hpp \
- /usr/include/boost/intrusive/detail/node_holder.hpp \
- /usr/include/boost/intrusive/detail/get_value_traits.hpp \
- /usr/include/boost/intrusive/detail/hook_traits.hpp \
- /usr/include/boost/intrusive/detail/parent_from_member.hpp \
- /usr/include/boost/move/detail/to_raw_pointer.hpp \
- /usr/include/boost/intrusive/detail/is_stateful_value_traits.hpp \
- /usr/include/boost/intrusive/detail/function_detector.hpp \
- /usr/include/boost/intrusive/detail/default_header_holder.hpp \
- /usr/include/boost/intrusive/detail/reverse_iterator.hpp \
- /usr/include/boost/move/detail/reverse_iterator.hpp \
- /usr/include/boost/move/detail/iterator_traits.hpp \
- /usr/include/boost/move/detail/std_ns_begin.hpp \
- /usr/include/boost/move/detail/std_ns_end.hpp \
- /usr/include/boost/intrusive/detail/uncast.hpp \
- /usr/include/boost/intrusive/detail/list_iterator.hpp \
- /usr/include/boost/intrusive/detail/std_fwd.hpp \
- /usr/include/boost/intrusive/detail/iiterator.hpp \
- /usr/include/boost/intrusive/detail/iterator.hpp \
- /usr/include/boost/intrusive/detail/array_initializer.hpp \
- /usr/include/boost/move/detail/placement_new.hpp \
- /usr/include/boost/move/detail/force_ptr.hpp \
- /usr/include/boost/intrusive/detail/exception_disposer.hpp \
- /usr/include/boost/intrusive/detail/equal_to_value.hpp \
- /usr/include/boost/intrusive/detail/key_nodeptr_comp.hpp \
- /usr/include/boost/intrusive/detail/ebo_functor_holder.hpp \
- /usr/include/boost/intrusive/detail/tree_value_compare.hpp \
- /usr/include/boost/intrusive/detail/simple_disposers.hpp \
- /usr/include/boost/intrusive/detail/size_holder.hpp \
- /usr/include/boost/intrusive/detail/algorithm.hpp \
- /usr/include/boost/intrusive/detail/value_functors.hpp \
- /usr/include/boost/intrusive/parent_from_member.hpp \
- /usr/local/include/barrett/systems/abstract/detail/system-inl.h \
- /usr/local/include/barrett/thread/null_mutex.h \
- /usr/local/include/barrett/systems/helpers.h \
- /usr/local/include/barrett/systems/abstract/single_io.h \
- /usr/local/include/barrett/systems/abstract/conversion.h \
  /usr/local/include/barrett/systems/detail/low_level_wam_wrapper-inl.h \
  /usr/local/include/barrett/systems/first_order_filter.h \
  /usr/local/include/barrett/math/first_order_filter.h \
@@ -1521,7 +1522,6 @@ CMakeFiles/leader_ft.dir/src/leader_ft.cpp.o: \
  /usr/local/include/barrett/systems/real_time_execution_manager.h \
  /usr/local/include/barrett/systems/constant.h \
  /usr/local/include/barrett/systems/exposed_output.h \
- /usr/local/include/barrett/systems/print_to_stream.h \
  /usr/local/include/barrett/systems/periodic_data_logger.h \
  /usr/local/include/barrett/log/real_time_writer.h \
  /usr/local/include/barrett/log/traits.h \
@@ -1636,7 +1636,8 @@ CMakeFiles/leader_ft.dir/src/leader_ft.cpp.o: \
  /usr/local/include/barrett/systems/modXYZ.h \
  /usr/local/include/barrett/standard_main_function.h \
  /usr/local/include/barrett/exception.h \
- /home/hela/amir/wam_teleop/src/leader_ft.h /usr/include/boost/asio.hpp \
+ /home/hela/amir/wam_teleop/src/lib/leader_ft.h \
+ /usr/include/boost/asio.hpp \
  /usr/include/boost/asio/any_completion_executor.hpp \
  /usr/include/boost/asio/detail/config.hpp /usr/include/linux/version.h \
  /usr/include/boost/asio/execution.hpp \
@@ -2174,7 +2175,7 @@ CMakeFiles/leader_ft.dir/src/leader_ft.cpp.o: \
  /usr/include/boost/asio/writable_pipe.hpp \
  /usr/include/boost/asio/write_at.hpp \
  /usr/include/boost/asio/impl/write_at.hpp \
- /home/hela/amir/wam_teleop/src/udp_handler_ft.h \
+ /home/hela/amir/wam_teleop/src/lib/udp_handler_ft.h \
  /usr/include/c++/13/thread /usr/include/c++/13/bits/this_thread_sleep.h \
  /usr/include/eigen3/Eigen/Dense /usr/include/eigen3/Eigen/Geometry \
  /usr/include/eigen3/Eigen/Eigenvalues \
@@ -2194,13 +2195,13 @@ CMakeFiles/leader_ft.dir/src/leader_ft.cpp.o: \
  /usr/include/eigen3/Eigen/src/Eigenvalues/GeneralizedEigenSolver.h \
  /usr/include/eigen3/Eigen/src/Eigenvalues/RealQZ.h \
  /usr/include/eigen3/Eigen/src/Eigenvalues/MatrixBaseEigenvalues.h \
- /home/hela/amir/wam_teleop/src/leader_dynamics.h \
+ /home/hela/amir/wam_teleop/src/lib/leader_dynamics.h \
  /usr/include/eigen3/Eigen/Dense \
- /home/hela/amir/wam_teleop/src/leader_beta.h \
- /home/hela/amir/wam_teleop/src/regressor_W.h \
- /home/hela/amir/wam_teleop/src/atift_system.h \
- /home/hela/amir/wam_teleop/src/atift_reader.h /usr/include/NIDAQmx.h \
+ /home/hela/amir/wam_teleop/src/lib/leader_beta.h \
+ /home/hela/amir/wam_teleop/src/lib/regressor_W.h \
+ /home/hela/amir/wam_teleop/src/lib/atift_system.h \
+ /home/hela/amir/wam_teleop/src/lib/atift_reader.h /usr/include/NIDAQmx.h \
  /usr/include/tinyxml2.h \
- /home/hela/amir/wam_teleop/src/tb_transformation.h \
- /home/hela/amir/wam_teleop/src/jacobian.h \
- /home/hela/amir/wam_teleop/src/bj_transformation.h
+ /home/hela/amir/wam_teleop/src/lib/tb_transformation.h \
+ /home/hela/amir/wam_teleop/src/lib/jacobian.h \
+ /home/hela/amir/wam_teleop/src/lib/bj_transformation.h

@@ -264,59 +264,59 @@ src/leader_ft.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/leader_ft.dir/build.make CMakeFiles/leader_ft.dir/src/leader_ft.cpp.s
 .PHONY : src/leader_ft.cpp.s
 
-src/udp_handler.o: src/udp_handler.cpp.o
-.PHONY : src/udp_handler.o
+src/lib/udp_handler.o: src/lib/udp_handler.cpp.o
+.PHONY : src/lib/udp_handler.o
 
 # target to build an object file
-src/udp_handler.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/follower.dir/build.make CMakeFiles/follower.dir/src/udp_handler.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/leader.dir/build.make CMakeFiles/leader.dir/src/udp_handler.cpp.o
-.PHONY : src/udp_handler.cpp.o
+src/lib/udp_handler.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/follower.dir/build.make CMakeFiles/follower.dir/src/lib/udp_handler.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/leader.dir/build.make CMakeFiles/leader.dir/src/lib/udp_handler.cpp.o
+.PHONY : src/lib/udp_handler.cpp.o
 
-src/udp_handler.i: src/udp_handler.cpp.i
-.PHONY : src/udp_handler.i
+src/lib/udp_handler.i: src/lib/udp_handler.cpp.i
+.PHONY : src/lib/udp_handler.i
 
 # target to preprocess a source file
-src/udp_handler.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/follower.dir/build.make CMakeFiles/follower.dir/src/udp_handler.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/leader.dir/build.make CMakeFiles/leader.dir/src/udp_handler.cpp.i
-.PHONY : src/udp_handler.cpp.i
+src/lib/udp_handler.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/follower.dir/build.make CMakeFiles/follower.dir/src/lib/udp_handler.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/leader.dir/build.make CMakeFiles/leader.dir/src/lib/udp_handler.cpp.i
+.PHONY : src/lib/udp_handler.cpp.i
 
-src/udp_handler.s: src/udp_handler.cpp.s
-.PHONY : src/udp_handler.s
+src/lib/udp_handler.s: src/lib/udp_handler.cpp.s
+.PHONY : src/lib/udp_handler.s
 
 # target to generate assembly for a file
-src/udp_handler.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/follower.dir/build.make CMakeFiles/follower.dir/src/udp_handler.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/leader.dir/build.make CMakeFiles/leader.dir/src/udp_handler.cpp.s
-.PHONY : src/udp_handler.cpp.s
+src/lib/udp_handler.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/follower.dir/build.make CMakeFiles/follower.dir/src/lib/udp_handler.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/leader.dir/build.make CMakeFiles/leader.dir/src/lib/udp_handler.cpp.s
+.PHONY : src/lib/udp_handler.cpp.s
 
-src/udp_handler_ft.o: src/udp_handler_ft.cpp.o
-.PHONY : src/udp_handler_ft.o
+src/lib/udp_handler_ft.o: src/lib/udp_handler_ft.cpp.o
+.PHONY : src/lib/udp_handler_ft.o
 
 # target to build an object file
-src/udp_handler_ft.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/follower_ft.dir/build.make CMakeFiles/follower_ft.dir/src/udp_handler_ft.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/leader_ft.dir/build.make CMakeFiles/leader_ft.dir/src/udp_handler_ft.cpp.o
-.PHONY : src/udp_handler_ft.cpp.o
+src/lib/udp_handler_ft.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/follower_ft.dir/build.make CMakeFiles/follower_ft.dir/src/lib/udp_handler_ft.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/leader_ft.dir/build.make CMakeFiles/leader_ft.dir/src/lib/udp_handler_ft.cpp.o
+.PHONY : src/lib/udp_handler_ft.cpp.o
 
-src/udp_handler_ft.i: src/udp_handler_ft.cpp.i
-.PHONY : src/udp_handler_ft.i
+src/lib/udp_handler_ft.i: src/lib/udp_handler_ft.cpp.i
+.PHONY : src/lib/udp_handler_ft.i
 
 # target to preprocess a source file
-src/udp_handler_ft.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/follower_ft.dir/build.make CMakeFiles/follower_ft.dir/src/udp_handler_ft.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/leader_ft.dir/build.make CMakeFiles/leader_ft.dir/src/udp_handler_ft.cpp.i
-.PHONY : src/udp_handler_ft.cpp.i
+src/lib/udp_handler_ft.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/follower_ft.dir/build.make CMakeFiles/follower_ft.dir/src/lib/udp_handler_ft.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/leader_ft.dir/build.make CMakeFiles/leader_ft.dir/src/lib/udp_handler_ft.cpp.i
+.PHONY : src/lib/udp_handler_ft.cpp.i
 
-src/udp_handler_ft.s: src/udp_handler_ft.cpp.s
-.PHONY : src/udp_handler_ft.s
+src/lib/udp_handler_ft.s: src/lib/udp_handler_ft.cpp.s
+.PHONY : src/lib/udp_handler_ft.s
 
 # target to generate assembly for a file
-src/udp_handler_ft.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/follower_ft.dir/build.make CMakeFiles/follower_ft.dir/src/udp_handler_ft.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/leader_ft.dir/build.make CMakeFiles/leader_ft.dir/src/udp_handler_ft.cpp.s
-.PHONY : src/udp_handler_ft.cpp.s
+src/lib/udp_handler_ft.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/follower_ft.dir/build.make CMakeFiles/follower_ft.dir/src/lib/udp_handler_ft.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/leader_ft.dir/build.make CMakeFiles/leader_ft.dir/src/lib/udp_handler_ft.cpp.s
+.PHONY : src/lib/udp_handler_ft.cpp.s
 
 # Help Target
 help:
@@ -342,12 +342,12 @@ help:
 	@echo "... src/leader_ft.o"
 	@echo "... src/leader_ft.i"
 	@echo "... src/leader_ft.s"
-	@echo "... src/udp_handler.o"
-	@echo "... src/udp_handler.i"
-	@echo "... src/udp_handler.s"
-	@echo "... src/udp_handler_ft.o"
-	@echo "... src/udp_handler_ft.i"
-	@echo "... src/udp_handler_ft.s"
+	@echo "... src/lib/udp_handler.o"
+	@echo "... src/lib/udp_handler.i"
+	@echo "... src/lib/udp_handler.s"
+	@echo "... src/lib/udp_handler_ft.o"
+	@echo "... src/lib/udp_handler_ft.i"
+	@echo "... src/lib/udp_handler_ft.s"
 .PHONY : help
 
 

@@ -7,6 +7,7 @@
  *      Author: Brian Zenowich
  */
 
+#include <barrett/systems/print_to_stream.h>
 #include <iostream>
 #include <string>
 
@@ -21,13 +22,13 @@
 #define BARRETT_SMF_VALIDATE_ARGS
 #include <barrett/standard_main_function.h>
 
-#include "leader_ft.h"
+#include "lib/leader_ft.h"
 // #include "background_state_publisher.h"
-#include "leader_dynamics.h"
-#include "atift_system.h"
-#include "tb_transformation.h"
-#include "jacobian.h"
-#include "bj_transformation.h"
+#include "lib/leader_dynamics.h"
+#include "lib/atift_system.h"
+#include "lib/tb_transformation.h"
+#include "lib/jacobian.h"
+#include "lib/bj_transformation.h"
 
 using namespace barrett;
 using detail::waitForEnter;
@@ -50,9 +51,12 @@ bool validate_args(int argc, char** argv) {
 }
 
 template <size_t DOF> int wam_main(int argc, char **argv, ProductManager &pm, systems::Wam<DOF> &wam) {
+
+    wam.gravityCompensate();
+
     BARRETT_UNITS_TEMPLATE_TYPEDEFS(DOF);
 
-        typedef typename barrett::math::Vector<6>::type ft_type;
+    typedef typename barrett::math::Vector<6>::type ft_type;
     typedef boost::tuple<double, ft_type> ft_sample_type;
 
     const std::string calPath =
@@ -91,51 +95,27 @@ template <size_t DOF> int wam_main(int argc, char **argv, ProductManager &pm, sy
     // BackgroundStatePublisher<DOF> state_publisher(pm.getExecutionManager(), wam);
 
 
-    ATIFTSystem ftSensor(
-        pm.getExecutionManager(),
-        calPath,
-        "Dev2/ai16:21"
-    );
+    ATIFTSystem ftSensor(pm.getExecutionManager(), calPath, "Dev2/ai16:21");
 
+    ft_type ftLimit;
+    ftLimit[0] = 20.0;  // Fx limit, N
+    ftLimit[1] = 20.0;  // Fy limit, N
+    ftLimit[2] = 60.0;  // Fz limit, N
+    ftLimit[3] = 1.0;   // Tx limit, Nm
+    ftLimit[4] = 1.0;   // Ty limit, Nm
+    ftLimit[5] = 1.0;   // Tz limit, Nm
 
-    ToolOrientationOutput<DOF> toolOrientation(
-        pm.getExecutionManager(),
-        wam
-    );
+    FTSaturationSystem ftSaturation(pm.getExecutionManager(), ftLimit);
+    ToolOrientationOutput<DOF> toolOrientation(pm.getExecutionManager(), wam);
+    ToolFTToBaseFT toolFTToBaseFT(pm.getExecutionManager());
+    ToolJacobianOutput<DOF> toolJacobian(wam, pm.getExecutionManager());
+    BaseFTToJointTorque<DOF> baseFTToJointTorque(pm.getExecutionManager());
 
-    ToolFTToBaseFT toolFTToBaseFT(
-        pm.getExecutionManager()
-    );
-
-    ToolJacobianOutput<DOF> toolJacobian(
-        wam,
-        pm.getExecutionManager()
-    );
-
-    BaseFTToJointTorque<DOF> baseFTToJointTorque(
-        pm.getExecutionManager()
-    );
-
-    barrett::systems::connect(
-        ftSensor.ftOutput,
-        toolFTToBaseFT.toolFTInput
-    );
-
-    barrett::systems::connect(
-        toolOrientation.rotationOut,
-        toolFTToBaseFT.rotationInput
-    );
-
-    barrett::systems::connect(
-        toolJacobian.output,
-        baseFTToJointTorque.jacobianInput
-    );
-
-    barrett::systems::connect(
-        toolFTToBaseFT.baseFTOutput,
-        baseFTToJointTorque.baseFTInput
-    );
-
+    barrett::systems::connect(ftSensor.ftOutput, ftSaturation.ftInput);
+    barrett::systems::connect(ftSaturation.ftOutput, toolFTToBaseFT.toolFTInput);
+    barrett::systems::connect(toolOrientation.rotationOut, toolFTToBaseFT.rotationInput);
+    barrett::systems::connect(toolJacobian.output, baseFTToJointTorque.jacobianInput);
+    barrett::systems::connect(toolFTToBaseFT.baseFTOutput, baseFTToJointTorque.baseFTInput);
 
     Leader<DOF> leader(pm.getExecutionManager(), argv[1], rec_port, send_port);
 
@@ -162,7 +142,7 @@ template <size_t DOF> int wam_main(int argc, char **argv, ProductManager &pm, sy
     jaFilter.setLowPass(l_omega_p);
     pm.getExecutionManager()->startManaging(jaFilter);
 
-
+    
     systems::connect(wam.jvOutput, hp1.input);
     systems::connect(hp1.output, jaWAM.input);
     systems::connect(jaWAM.output, jaFilter.input);
@@ -183,7 +163,11 @@ template <size_t DOF> int wam_main(int argc, char **argv, ProductManager &pm, sy
     systems::connect(leader.wamJPOutput, Filter.input);
     systems::connect(baseFTToJointTorque.jointTorqueOutput, leader.ftTorqueIn);
 
-    wam.gravityCompensate();
+    systems::PrintToStream<ft_type> printSensorFT(pm.getExecutionManager(), "Sensor/Tool FT: ");
+    systems::PrintToStream<ft_type> printSatFT(pm.getExecutionManager(), "Sat FT: ");
+
+    systems::connect(ftSensor.ftOutput, printSensorFT.input);
+    systems::connect(ftSaturation.ftOutput, printSatFT.input);
 
     std::string line;
     v_type gainTmp;

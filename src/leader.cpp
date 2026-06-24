@@ -21,9 +21,9 @@
 #define BARRETT_SMF_VALIDATE_ARGS
 #include <barrett/standard_main_function.h>
 
-#include "leader.h"
+#include "lib/leader.h"
 // #include "background_state_publisher.h"
-#include "leader_dynamics.h"
+#include "lib/leader_dynamics.h"
 
 using namespace barrett;
 using detail::waitForEnter;

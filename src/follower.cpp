@@ -21,9 +21,9 @@
 #define BARRETT_SMF_VALIDATE_ARGS
 #include <barrett/standard_main_function.h>
 
-#include "follower.h"
+#include "lib/follower.h"
 // #include "background_state_publisher.h"
-#include "follower_dynamics.h"
+#include "lib/follower_dynamics.h"
 
 using namespace barrett;
 using detail::waitForEnter;

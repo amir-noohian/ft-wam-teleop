@@ -3,11 +3,11 @@
 
 CMakeFiles/follower.dir/src/follower.cpp.o
  /home/hela/amir/wam_teleop/src/follower.cpp
- /home/hela/amir/wam_teleop/src/follower.h
- /home/hela/amir/wam_teleop/src/follower_beta.h
- /home/hela/amir/wam_teleop/src/follower_dynamics.h
- /home/hela/amir/wam_teleop/src/regressor_W.h
- /home/hela/amir/wam_teleop/src/udp_handler.h
+ /home/hela/amir/wam_teleop/src/lib/follower.h
+ /home/hela/amir/wam_teleop/src/lib/follower_beta.h
+ /home/hela/amir/wam_teleop/src/lib/follower_dynamics.h
+ /home/hela/amir/wam_teleop/src/lib/regressor_W.h
+ /home/hela/amir/wam_teleop/src/lib/udp_handler.h
  /usr/include/alloca.h
  /usr/include/arpa/inet.h
  /usr/include/asm-generic/bitsperlong.h
@@ -2355,9 +2355,9 @@ CMakeFiles/follower.dir/src/follower.cpp.o
  /usr/local/include/libconfig.h
  /usr/local/include/libconfig.h++
 
-CMakeFiles/follower.dir/src/udp_handler.cpp.o
- /home/hela/amir/wam_teleop/src/udp_handler.cpp
- /home/hela/amir/wam_teleop/src/udp_handler.h
+CMakeFiles/follower.dir/src/lib/udp_handler.cpp.o
+ /home/hela/amir/wam_teleop/src/lib/udp_handler.cpp
+ /home/hela/amir/wam_teleop/src/lib/udp_handler.h
  /usr/include/alloca.h
  /usr/include/arpa/inet.h
  /usr/include/asm-generic/bitsperlong.h

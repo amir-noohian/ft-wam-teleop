@@ -21,9 +21,9 @@
 #define BARRETT_SMF_VALIDATE_ARGS
 #include <barrett/standard_main_function.h>
 
-#include "follower_ft.h"
+#include "lib/follower_ft.h"
 // #include "background_state_publisher.h"
-#include "follower_dynamics.h"
+#include "lib/follower_dynamics.h"
 
 using namespace barrett;
 using detail::waitForEnter;
@@ -46,6 +46,9 @@ bool validate_args(int argc, char** argv) {
 }
 
 template <size_t DOF> int wam_main(int argc, char **argv, ProductManager &pm, systems::Wam<DOF> &wam) {
+
+    wam.gravityCompensate();
+
     BARRETT_UNITS_TEMPLATE_TYPEDEFS(DOF);
 
     jp_type SYNC_POS; // the position each WAM should move to before linking
@@ -120,8 +123,6 @@ template <size_t DOF> int wam_main(int argc, char **argv, ProductManager &pm, sy
     systems::connect(wam.jpOutput, follower.wamJPIn);
     systems::connect(wam.jvOutput, follower.wamJVIn);
     systems::connect(follower.wamJPOutput, Filter.input);
-
-    wam.gravityCompensate();
 
     std::string line;
     v_type gainTmp;

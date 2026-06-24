@@ -39,7 +39,7 @@ endif()
 
 include_directories(${NIDAQMX_INCLUDE_DIR})
 
-add_executable(follower src/follower.cpp src/udp_handler.cpp)
+add_executable(follower src/follower.cpp src/lib/udp_handler.cpp)
 target_link_libraries(follower
     ${BARRETT_LIBRARIES}
     ${catkin_LIBRARIES}
@@ -47,7 +47,7 @@ target_link_libraries(follower
     Boost::thread
 )
 
-add_executable(follower_ft src/follower_ft.cpp src/udp_handler_ft.cpp)
+add_executable(follower_ft src/follower_ft.cpp src/lib/udp_handler_ft.cpp)
 target_link_libraries(follower_ft
     ${BARRETT_LIBRARIES}
     ${catkin_LIBRARIES}
@@ -55,7 +55,7 @@ target_link_libraries(follower_ft
     Boost::thread
 )
 
-add_executable(leader src/leader.cpp src/udp_handler.cpp)
+add_executable(leader src/leader.cpp src/lib/udp_handler.cpp)
 target_link_libraries(leader
     ${BARRETT_LIBRARIES}
     ${catkin_LIBRARIES}
@@ -63,7 +63,7 @@ target_link_libraries(leader
     Boost::thread
 )
 
-add_executable(leader_ft src/leader_ft.cpp src/udp_handler_ft.cpp)
+add_executable(leader_ft src/leader_ft.cpp src/lib/udp_handler_ft.cpp)
 target_link_libraries(leader_ft
     ${BARRETT_LIBRARIES}
     ${catkin_LIBRARIES}

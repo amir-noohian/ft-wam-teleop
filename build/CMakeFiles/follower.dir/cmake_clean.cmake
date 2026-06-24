@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/follower.dir/src/follower.cpp.o"
   "CMakeFiles/follower.dir/src/follower.cpp.o.d"
-  "CMakeFiles/follower.dir/src/udp_handler.cpp.o"
-  "CMakeFiles/follower.dir/src/udp_handler.cpp.o.d"
+  "CMakeFiles/follower.dir/src/lib/udp_handler.cpp.o"
+  "CMakeFiles/follower.dir/src/lib/udp_handler.cpp.o.d"
   "follower"
   "follower.pdb"
 )

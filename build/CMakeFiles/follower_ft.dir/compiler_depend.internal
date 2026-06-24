@@ -3,11 +3,11 @@
 
 CMakeFiles/follower_ft.dir/src/follower_ft.cpp.o
  /home/hela/amir/wam_teleop/src/follower_ft.cpp
- /home/hela/amir/wam_teleop/src/follower_beta.h
- /home/hela/amir/wam_teleop/src/follower_dynamics.h
- /home/hela/amir/wam_teleop/src/follower_ft.h
- /home/hela/amir/wam_teleop/src/regressor_W.h
- /home/hela/amir/wam_teleop/src/udp_handler_ft.h
+ /home/hela/amir/wam_teleop/src/lib/follower_beta.h
+ /home/hela/amir/wam_teleop/src/lib/follower_dynamics.h
+ /home/hela/amir/wam_teleop/src/lib/follower_ft.h
+ /home/hela/amir/wam_teleop/src/lib/regressor_W.h
+ /home/hela/amir/wam_teleop/src/lib/udp_handler_ft.h
  /usr/include/alloca.h
  /usr/include/arpa/inet.h
  /usr/include/asm-generic/bitsperlong.h
@@ -2355,9 +2355,9 @@ CMakeFiles/follower_ft.dir/src/follower_ft.cpp.o
  /usr/local/include/libconfig.h
  /usr/local/include/libconfig.h++
 
-CMakeFiles/follower_ft.dir/src/udp_handler_ft.cpp.o
- /home/hela/amir/wam_teleop/src/udp_handler_ft.cpp
- /home/hela/amir/wam_teleop/src/udp_handler_ft.h
+CMakeFiles/follower_ft.dir/src/lib/udp_handler_ft.cpp.o
+ /home/hela/amir/wam_teleop/src/lib/udp_handler_ft.cpp
+ /home/hela/amir/wam_teleop/src/lib/udp_handler_ft.h
  /usr/include/alloca.h
  /usr/include/arpa/inet.h
  /usr/include/asm-generic/bitsperlong.h

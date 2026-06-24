@@ -1636,7 +1636,8 @@ CMakeFiles/follower.dir/src/follower.cpp.o: \
  /usr/local/include/barrett/systems/modXYZ.h \
  /usr/local/include/barrett/standard_main_function.h \
  /usr/local/include/barrett/exception.h \
- /home/hela/amir/wam_teleop/src/follower.h /usr/include/boost/asio.hpp \
+ /home/hela/amir/wam_teleop/src/lib/follower.h \
+ /usr/include/boost/asio.hpp \
  /usr/include/boost/asio/any_completion_executor.hpp \
  /usr/include/boost/asio/detail/config.hpp /usr/include/linux/version.h \
  /usr/include/boost/asio/execution.hpp \
@@ -2174,8 +2175,8 @@ CMakeFiles/follower.dir/src/follower.cpp.o: \
  /usr/include/boost/asio/writable_pipe.hpp \
  /usr/include/boost/asio/write_at.hpp \
  /usr/include/boost/asio/impl/write_at.hpp \
- /home/hela/amir/wam_teleop/src/udp_handler.h /usr/include/c++/13/thread \
- /usr/include/c++/13/bits/this_thread_sleep.h \
+ /home/hela/amir/wam_teleop/src/lib/udp_handler.h \
+ /usr/include/c++/13/thread /usr/include/c++/13/bits/this_thread_sleep.h \
  /usr/include/eigen3/Eigen/Dense /usr/include/eigen3/Eigen/Geometry \
  /usr/include/eigen3/Eigen/Eigenvalues \
  /usr/include/eigen3/Eigen/src/Eigenvalues/Tridiagonalization.h \
@@ -2194,7 +2195,7 @@ CMakeFiles/follower.dir/src/follower.cpp.o: \
  /usr/include/eigen3/Eigen/src/Eigenvalues/GeneralizedEigenSolver.h \
  /usr/include/eigen3/Eigen/src/Eigenvalues/RealQZ.h \
  /usr/include/eigen3/Eigen/src/Eigenvalues/MatrixBaseEigenvalues.h \
- /home/hela/amir/wam_teleop/src/follower_dynamics.h \
+ /home/hela/amir/wam_teleop/src/lib/follower_dynamics.h \
  /usr/include/eigen3/Eigen/Dense \
- /home/hela/amir/wam_teleop/src/follower_beta.h \
- /home/hela/amir/wam_teleop/src/regressor_W.h
+ /home/hela/amir/wam_teleop/src/lib/follower_beta.h \
+ /home/hela/amir/wam_teleop/src/lib/regressor_W.h
